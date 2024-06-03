@@ -1,6 +1,5 @@
 import Article from "@/components/Article"
 import FlavorButton from "@/components/FlavorButton"
-import Pair from "@/components/Pair"
 import Main from "@/components/Main"
 import gmuLogo from "@/img/gmu.svg"
 import nextLogo from "@/img/nextjs.svg"
@@ -17,9 +16,10 @@ const proYears = new Date().getFullYear() - 2012
 export default function Home() {
   return (
     <Main>
-      <Article title="👋 About">
+      <Article title="Daniel Joseph Bryant 👋">
+        <p className="font-semibold  text-lg">Software Engineer</p>
         <p>
-          I&apos;m a software engineer and team leader with {proYears} years of
+          I&apos;m an engineer and team leader with {proYears} years of
           professional experience and {allYears} years building websites.
 
           I have the true spirit of a full stack engineer so I&apos;ve done it
@@ -39,40 +39,72 @@ export default function Home() {
         </p>
       </Article>
 
-      <Article title="🎓 Background">
-        <Pair>
+      <Article title="Education 🎓">
+        <div className="flex flex-row gap-4 my-2">
           <Image src={gmuLogo} alt="GMU Logo" height={32} />
-          <p className="font-semibold">George Mason University</p>
-        </Pair>
+        </div>
+
+        <div className="font-semibold">
+          George Mason University 2012
+        </div>
+        <div className="font-semibold">
+          Bachelor of Science in Computer Science
+        </div>
       </Article>
 
-      <Article title="🤖 Languages">
-        <Pair>
+      <Article title="Languages 🤖">
+        <div className="flex flex-row flex-wrap gap-2 my-2">
           <Image src={typescriptLogo} alt="TypeScript Logo" height={32} />
-          <p className="font-semibold">TypeScript</p>
-        </Pair>
-        <Pair>
           <Image src={rubyLogo} alt="Ruby Logo" height={32} />
-          <p className="font-semibold">Ruby</p>
-        </Pair>
+        </div>
+
+        <div className="font-semibold">Most used</div>
+        <ul className="list-disc pl-4">
+          <li>Ruby</li>
+          <li>SQL</li>
+          <li>TypeScript</li>
+        </ul>
+
+        <div className="font-semibold">Professionally used</div>
+        <ul className="list-disc pl-4">
+          <li>C</li>
+          <li>C++</li>
+          <li>Go</li>
+          <li>Java</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Rust</li>
+          <li>Swift</li>
+        </ul>
       </Article>
 
-      <Article title="🧰 Skills">
-        <Pair>
+      <Article title="Technologies 💻">
+        <div className="flex flex-row flex-wrap gap-2 my-2">
           <Image src={reactLogo} alt="React Logo" height={32} />
-          <p className="font-semibold">React</p>
-        </Pair>
-        <Pair>
-          <Image src={nextLogo} alt="Next.js Logo" height={32} />
-        </Pair>
-        <Pair>
-          <p className="font-semibold">Ruby on</p>
           <Image src={railsLogo} alt="Ruby on Rails Logo" height={32} />
-        </Pair>
-        <Pair>
           <Image src={postgresLogo} alt="PostgreSQL Logo" height={32} />
-          <p className="font-semibold">PostgreSQL</p>
-        </Pair>
+          <Image src={nextLogo} alt="Next.js Logo" height={32} />
+        </div>
+
+        <div className="font-semibold">Most used</div>
+        <ul className="list-disc pl-4">
+          <li>Next.js</li>
+          <li>PostgreSQL</li>
+          <li>React</li>
+          <li>Ruby on Rails</li>
+        </ul>
+
+        <div className="font-semibold">Professionally used</div>
+        <ul className="list-disc pl-4">
+          <li>Angular</li>
+          <li>FastAPI</li>
+          <li>Flask</li>
+          <li>MongoDB</li>
+          <li>MySQL</li>
+          <li>Redis</li>
+          <li>SQLAlchemy</li>
+          <li>jQuery</li>
+        </ul>
       </Article>
     </Main>
   )

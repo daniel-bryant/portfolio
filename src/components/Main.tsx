@@ -14,9 +14,13 @@ export default function Main({ children }: PropsWithChildren) {
         + flavor
     }>
       <div className="w-full max-w-lg text-text">
-        <div className="flex flex-row justify-between text-2xl">
-          <a href="/" className="font-semibold">Daniel Joseph Bryant</a>
-          <FlavorButton />
+        <div className="flex justify-between font-semibold">
+          <a href="/" className="text-2xl">🚀</a>
+          <div className="flex gap-4 text-lg">
+            <a href="https://medium.com/@danieljoseph.dev">Blog</a>
+            <a href="https://rails101.github.io">Rails 101</a>
+            <FlavorButton />
+          </div>
         </div>
         {children}
       </div>
